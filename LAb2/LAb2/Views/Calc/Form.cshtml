@@ -1,0 +1,10 @@
+﻿<div class="text-left">
+	<h1 class="display-4">@ViewData["Title"]</h1>
+	@using (Html.BeginForm())
+	{
+		@Html.TextBox("a", "", new { type="number" })<br>
+		@Html.DropDownList("operation", new SelectList(new[] {"+", "-", "*", "/"}))<br>
+		@Html.TextBox("b", "", new { type="nubmer" })<br>
+		<input type="submit" value="Submit" />
+	}
+</div>
